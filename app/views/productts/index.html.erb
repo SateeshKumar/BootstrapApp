@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="span2 offset10">
+    <input type="text" class="search-query" placeholder="Search">
+    
+  </div>
+</div>
+<div class="row">
+  <div class="span12">
+    <ul class="thumbnails">
+    <% for movie in @movie %>
+      <li class="span2">
+        <div class="thumbnail">
+          <%= link_to image_tag(movie.posters.thumbnail, :border=>0, :class => 'dock-item'),:action=>"show",:id=>movie.id %>
+          <h3>Thumbnail label</h3>
+          <p>Thumbnail caption...</p>
+        </div>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="span7 offset1">
+    	Title : <%= @movie.title %>
+    </div>
+    <div class="span4">
+    	<%= image_tag(@movie.posters.original) %>
+    </div>
+  </div>
+  <div class="row" name="update-container">
+  	<div class="span4 offset1">
+	  	<%= render :partial => "comments/form" %>
+	 </div>
+  </div>
+</div>
